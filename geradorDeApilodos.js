@@ -1,6 +1,6 @@
  
-let brinquedos = ["João", "Jonas", "Bruno", "Eduardo"];
-let adjetivo = ["baitola", "mala","zé ruela", "pegador", "Boca de veludo", "pega ninguém", "Lobinho"];
+let nomes = ["João", "Jonas", "Bruno", "Eduardo"];
+let adjetivo = ["apelidoX", "apelidoY","apelidoZ", "apelidoH", ""];
 function juntarNomes(brinquedo, objeto) {
   return brinquedo + " " + objeto;
 }
@@ -16,10 +16,5 @@ function processar(caixaLista, caixaObjeto, caixaFuncao) {
   }
   return listaTratada;
 }
-console.log(processar(brinquedos, adjetivo, juntarNomes));
+console.log(processar(nomes, adjetivo, juntarNomes));
  
-/* 
- let num = Math.random() * 50
-console.log(num)
-console.log(Math.round(num))
-console.log(Math.round(Math.random() * 2)) */
