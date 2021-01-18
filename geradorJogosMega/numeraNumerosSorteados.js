@@ -1,13 +1,11 @@
 const mega = require("./todosOsJogos/numSorteados");
 const objLista = require("./todosOsJogos/objLista");
-//const contagem = require('./funcao/fazContagem')
+
 
 let numeros = [];
-let ordemMega = [];
-for (sorteio of mega) {
-  ordemMega.push(sorteio);
 
-  for (numero of sorteio) {
+for (sorteio of mega) {
+   for (numero of sorteio) {
     switch (numero) {
       case 1:
         objLista.um++;
