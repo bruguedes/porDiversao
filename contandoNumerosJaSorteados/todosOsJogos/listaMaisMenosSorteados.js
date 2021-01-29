@@ -1,11 +1,5 @@
-//const mega = require("./numSorteados");
-
-
-
-
 const maisSorteado = []
 const menosSorteado = []
-
 
 // trata o nome de cada numero
 const tratandoNome = (nome) => {
@@ -18,10 +12,15 @@ const tratandoNome = (nome) => {
     nome: nome.slice(divisor + 1, nome.length).replace("_", " e "),
   };
 };
+const arrMaisMenos = (arrDestino, ordem) =>{
+  for (let i = 0; i <= 9; i++) {
+    let str = ordem[i];
+    let resultado = tratandoNome(ordem[i]);
+    arrDestino.push(Number(resultado.nome));
+   
+  }
+}
 
-
-
-//const separaNumeros = array=>{}
 const relatorio = (array) => {
 
   let  objLista = {}
@@ -36,38 +35,17 @@ const relatorio = (array) => {
 
 //Insere dentro do array numero invertendo o resultado para fazer o sort
 for (numero in objLista) {
-  //let o = objLista[numero] + ":" + numero;
   numeros.push(objLista[numero] + ":" + numero);
 }
 
   let ordemCrecente = numeros.sort();
   let ordemDecrescente = [...ordemCrecente].reverse();
 
-  for (let i = 0; i <= 9; i++) {
-    let str = ordemCrecente[i];
-    let resultado = tratandoNome(ordemCrecente[i]);
-    menosSorteado.push(resultado.nome);
-   
-  }
-  
-
-  for (let i = 0; i <= 9; i++) {
-    let str = ordemDecrescente[i];
-    let resultado = tratandoNome(ordemDecrescente[i]);
-    maisSorteado.push(resultado.nome)
-   
-  }
+  arrMaisMenos(maisSorteado, ordemCrecente)
+  arrMaisMenos(menosSorteado, ordemDecrescente)
+ 
 };
 
-
-
-
-//console.log(separaNumeros(mega));
-
-
-
-//console.log(menosSorteado)
-//console.log(maisSorteado)
 
 module.exports = {
   relatorio,
