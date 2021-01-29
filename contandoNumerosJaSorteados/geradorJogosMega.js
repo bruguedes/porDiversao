@@ -1,7 +1,21 @@
-let maisSorteado = [05, 10, 23, 33, 42, 53 ]
-let menosSorteado = [26, 55, 22, 21, 15, 48]
+const {maisSorteado, menosSorteado, relatorio} = require('./todosOsJogos/listaMaisMenosSorteados')
+const mega = require("./todosOsJogos/numerosSorteadosMega");
+
+
+// let maisSorteado = [05, 10, 23, 33, 42, 53 ]
+// let menosSorteado = [26, 55, 22, 21, 15, 48]
 let meusPreferidos = [02, 07, 30, 32, 33, 29, 11, 60, 59, 13]
 let jogos = []
+
+
+
+
+// console.log(maisSorteado);
+// console.log(menosSorteado);
+
+
+
+
 
 let escolher = (qdtJogos, qtdNumeros, arrMaisSorteado, arrMenosSorteado)=>{
     let posicaoArr = 0
@@ -39,5 +53,6 @@ let escolher = (qdtJogos, qtdNumeros, arrMaisSorteado, arrMenosSorteado)=>{
 
 
 //escolher(6,6, meusPreferidos, meusPreferidos)
-escolher(6, 6, maisSorteado, menosSorteado)
+relatorio(mega)
+escolher(6, 6, maisSorteado, maisSorteado)
 console.log(jogos)
