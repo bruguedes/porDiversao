@@ -9,8 +9,8 @@ const {filtrar:filtrarJogos, jogos:jogosFiltrados} = require('./todosOsJogos/eli
 
 
 let meusPreferidos = [02, 07, 30, 32, 33, 29, 11, 60, 59, 13]
-const saveUser = (users)=>{
-    fs.writeFileSync(filePath, JSON.stringify(users, null, ))
+const saveJogos = (jogos)=>{
+    fs.writeFileSync(filePath, JSON.stringify(jogos, null, ))
 }
 
 
@@ -47,7 +47,7 @@ let escolher = (qdtJogos, qtdNumeros, arrMaisSorteado, arrMenosSorteado)=>{
 }
 
 filtrarJogos(paraFiltrar)
-saveUser(jogosFiltrados)
+saveJogos(jogosFiltrados)
 console.log(jogosFiltrados)
 
 }
@@ -59,6 +59,6 @@ console.log(jogosFiltrados)
 //ex.: escolher(6,6, meusPreferidos, meusPreferidos)
 
 relatorio(mega)
-escolher(10, 6, maisSorteado, menosSorteado)
+escolher(5, 6, maisSorteado, menosSorteado)
 
 
